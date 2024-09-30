@@ -1,0 +1,24 @@
+### Project Specific ###
+
+
+### Lab specific ###
+Tic-Tac-Toe with AI (Java)/Initial setup
+Tic-Tac-Toe with AI (Java)/Easy does it
+Tic-Tac-Toe with AI (Java)/Watch 'em fight
+Tic-Tac-Toe with AI (Java)/Signs of intelligence
+Tic-Tac-Toe with AI (Java)/An undefeated champion
+Tic-Tac-Toe with AI (Java)/lesson-info.yaml
+/Topics
+course-info.yaml
+course-remote-info.yaml
+
+
+### IDEA ###
+.idea/
+*.iml
+
+
+### Gradle ###
+.gradle/
+*build
+*out
