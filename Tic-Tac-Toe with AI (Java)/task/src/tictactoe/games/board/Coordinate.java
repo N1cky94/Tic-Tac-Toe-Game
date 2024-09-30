@@ -1,4 +1,4 @@
-package tictactoe;
+package tictactoe.games.board;
 
 public class Coordinate {
     private final int x;

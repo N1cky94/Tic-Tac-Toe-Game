@@ -1,4 +1,6 @@
-package tictactoe;
+package tictactoe.games.board;
+
+import tictactoe.games.Condition;
 
 import java.util.Random;
 

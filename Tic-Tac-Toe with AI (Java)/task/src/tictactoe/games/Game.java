@@ -1,9 +1,8 @@
 package tictactoe.games;
 
-import tictactoe.Condition;
-import tictactoe.Coordinate;
-import tictactoe.KeyboardUtil;
-import tictactoe.PlayingField;
+import tictactoe.games.board.Coordinate;
+import tictactoe.games.board.PlayingField;
+import tictactoe.utils.KeyboardUtil;
 
 public class Game {
     private final PlayingField board;

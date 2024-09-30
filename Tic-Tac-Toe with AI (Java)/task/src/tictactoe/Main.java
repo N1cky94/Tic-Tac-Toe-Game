@@ -3,6 +3,7 @@ package tictactoe;
 import tictactoe.games.AiVsAiGame;
 import tictactoe.games.UserVsAiGame;
 import tictactoe.games.UserVsUserGame;
+import tictactoe.utils.KeyboardUtil;
 
 public class Main {
     public static void main(String[] args) {

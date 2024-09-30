@@ -1,4 +1,4 @@
-package tictactoe;
+package tictactoe.games;
 
 public enum Condition {
     STALE,
