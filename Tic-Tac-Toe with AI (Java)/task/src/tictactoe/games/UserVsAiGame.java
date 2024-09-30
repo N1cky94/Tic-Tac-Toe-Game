@@ -1,7 +1,5 @@
 package tictactoe.games;
 
-import tictactoe.Condition;
-
 public class UserVsAiGame {
     private final Game game;
     private boolean userIsNext;
@@ -16,17 +14,7 @@ public class UserVsAiGame {
             this.nextTurn();
         }
 
-        Condition gameCondition = game.getCondition();
-
-        if (gameCondition.equals(Condition.O_WIN)) {
-            System.out.println("O wins");
-        } else if (gameCondition.equals(Condition.X_WIN)) {
-            System.out.println("X wins");
-        } else if (gameCondition.equals(Condition.STALE)) {
-            System.out.println("Draw");
-        } else {
-            System.out.println("Game not finished");
-        }
+        game.printGameCondition();
     }
 
     public void nextTurn() {

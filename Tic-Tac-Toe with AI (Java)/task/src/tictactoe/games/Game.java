@@ -24,6 +24,20 @@ public class Game {
         return board.getGameCondition();
     }
 
+    public void printGameCondition() {
+        Condition gameCondition = this.getCondition();
+
+        if (gameCondition.equals(Condition.O_WIN)) {
+            System.out.println("O wins");
+        } else if (gameCondition.equals(Condition.X_WIN)) {
+            System.out.println("X wins");
+        } else if (gameCondition.equals(Condition.STALE)) {
+            System.out.println("Draw");
+        } else {
+            System.out.println("Game not finished");
+        }
+    }
+
     void nextUserTurn() {
         String coordinateString = KeyboardUtil.askStringInput("Enter the coordinates: ");
         if (isValidCoordinate(coordinateString)) {
