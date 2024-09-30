@@ -28,6 +28,12 @@ public class Main {
                 } else if (answerList[1].equals("user") && answerList[2].equals("user")) {
                     UserVsUserGame game = new UserVsUserGame();
                     game.run();
+                } else if (answerList[1].equals("user") && answerList[2].equals("medium")) {
+                    UserVsAiGame game = new UserVsAiGame(true);
+                    game.run();
+                } else if (answerList[1].equals("medium") && answerList[2].equals("user")) {
+                    UserVsAiGame game = new UserVsAiGame(false);
+                    game.run();
                 } else {
                     System.out.println("Bad parameters!");
                 }
