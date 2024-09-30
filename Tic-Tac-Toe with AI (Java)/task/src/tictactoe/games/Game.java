@@ -1,4 +1,9 @@
-package tictactoe;
+package tictactoe.games;
+
+import tictactoe.Condition;
+import tictactoe.Coordinate;
+import tictactoe.KeyboardUtil;
+import tictactoe.PlayingField;
 
 public class Game {
     private final PlayingField board;
