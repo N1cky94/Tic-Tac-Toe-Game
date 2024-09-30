@@ -9,6 +9,22 @@ public class Game {
         System.out.println(this.board);
     }
 
+    public void run() {
+        while(!this.isFinished()) {
+            this.nextTurn();
+        }
+
+        if (this.getCondition().equals(Condition.O_WIN)) {
+            System.out.println("O wins");
+        } else if (this.getCondition().equals(Condition.X_WIN)) {
+            System.out.println("X wins");
+        } else if (this.getCondition().equals(Condition.STALE)) {
+            System.out.println("Draw");
+        } else {
+            System.out.println("Game not finished");
+        }
+    }
+
     public boolean isFinished() {
         return switch (board.getGameCondition()) {
             case O_WIN, X_WIN, STALE -> true;
