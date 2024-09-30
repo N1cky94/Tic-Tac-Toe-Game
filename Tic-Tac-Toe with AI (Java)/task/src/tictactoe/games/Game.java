@@ -7,27 +7,10 @@ import tictactoe.PlayingField;
 
 public class Game {
     private final PlayingField board;
-    private boolean userPlaysNext = true;
 
     public Game() {
         this.board = PlayingField.createNewField();
         System.out.println(this.board);
-    }
-
-    public void run() {
-        while(!this.isFinished()) {
-            this.nextTurn();
-        }
-
-        if (this.getCondition().equals(Condition.O_WIN)) {
-            System.out.println("O wins");
-        } else if (this.getCondition().equals(Condition.X_WIN)) {
-            System.out.println("X wins");
-        } else if (this.getCondition().equals(Condition.STALE)) {
-            System.out.println("Draw");
-        } else {
-            System.out.println("Game not finished");
-        }
     }
 
     public boolean isFinished() {
@@ -41,21 +24,19 @@ public class Game {
         return board.getGameCondition();
     }
 
-    public void nextTurn() {
-        if (userPlaysNext) {
-            String coordinateString = KeyboardUtil.askStringInput("Enter the coordinates: ");
-            if (isValidCoordinate(coordinateString)) {
-                Coordinate coordinate = new Coordinate(coordinateString);
-                board.makeMove(coordinate);
-                System.out.println(board);
-                userPlaysNext = false;
-            }
-        } else {
-            System.out.println("Making move level \"easy\"");
-            board.makeRandomMove();
+    void nextUserTurn() {
+        String coordinateString = KeyboardUtil.askStringInput("Enter the coordinates: ");
+        if (isValidCoordinate(coordinateString)) {
+            Coordinate coordinate = new Coordinate(coordinateString);
+            board.makeMove(coordinate);
             System.out.println(board);
-            userPlaysNext = true;
         }
+    }
+
+    void nextAiTurn() {
+        System.out.println("Making move level \"easy\"");
+        board.makeRandomMove();
+        System.out.println(board);
     }
 
     private boolean isValidCoordinate(String coordinate) {
