@@ -10,7 +10,7 @@ public class UserVsAiGame {
     }
 
     public void run() {
-        while(!game.isFinished()) {
+        while(game.isNotFinished()) {
             this.nextTurn();
         }
 

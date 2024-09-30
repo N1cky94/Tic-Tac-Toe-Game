@@ -13,10 +13,10 @@ public class Game {
         System.out.println(this.board);
     }
 
-    public boolean isFinished() {
+    public boolean isNotFinished() {
         return switch (board.getGameCondition()) {
-            case O_WIN, X_WIN, STALE -> true;
-            default -> false;
+            case O_WIN, X_WIN, STALE -> false;
+            default -> true;
         };
     }
 
